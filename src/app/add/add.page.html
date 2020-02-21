@@ -1,0 +1,39 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>DAWAFY</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <ion-item class="buttons">
+        <ion-label position="floating"> Name: </ion-label>
+        <ion-input placeholder="Put the name of the album" [(ngModel)]="name"></ion-input>
+      </ion-item>
+      <ion-item class="buttons">
+        <ion-label position="floating"> Artist: </ion-label>
+        <ion-input placeholder="Put the artist of the album" [(ngModel)]="artist"></ion-input>
+      </ion-item>
+      <ion-item class="buttons">
+        <ion-label>Image: </ion-label>
+        <ion-select placeholder="Put the image of the album" [(ngModel)]="image">
+          <ion-select-option value="../../assets/jackson.jpeg">Jackson</ion-select-option>
+          <ion-select-option value="../../assets/iglesias.jpg">Iglesias</ion-select-option>
+          <ion-select-option value="../../assets/destrangis.jpg"> Estopa </ion-select-option>
+          <ion-select-option value="../../assets/christmas.png"> Christmas </ion-select-option>
+          <ion-select-option value="../../assets/ot.jpg"> OT </ion-select-option>
+        </ion-select>
+      </ion-item>
+      <ion-item class="buttons">
+        <ion-label position="floating"> Year: </ion-label>
+        <ion-input placeholder="Put the year of the album" type="number" [(ngModel)]="year"></ion-input>
+      </ion-item>
+      <ion-item class="buttons">
+        <ion-checkbox class="check" [(ngModel)]="fav"></ion-checkbox>
+        <ion-text class="labelCheck"> Fav?Y/N</ion-text>
+      </ion-item>
+      <ion-fab vertical="bottom" horizontal="end" slot="fixed" class="fabButton">
+        <ion-fab-button (click)="sendToMain()" color="success">
+          <ion-icon name="save" size="large"></ion-icon>
+        </ion-fab-button>
+      </ion-fab>
+</ion-content>

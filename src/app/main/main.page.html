@@ -1,0 +1,37 @@
+<ion-header>
+  <ion-toolbar class="ion-text-center">
+    <ion-buttons slot="end">
+      <ion-button (click)="goToAdd()">
+        <ion-icon name="add-outline" size="large" class="plus"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title>DawAFy</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-segment (ionChange)="segmentChanged($event)">
+    <ion-segment-button value="all">
+      <ion-label>All</ion-label>
+    </ion-segment-button>
+    <ion-segment-button value="favs">
+      <ion-label>Favs</ion-label>
+    </ion-segment-button>
+  </ion-segment>
+  <ion-grid>
+    <ion-row class="margen" >
+      <ion-col size="6" *ngFor="let music of musics">
+        <ion-card>
+            <img src="{{music.photo}}" width="500px">
+            <ion-card-header>
+              <ion-card-title>{{music.name}}</ion-card-title>
+            </ion-card-header>
+
+            <ion-card-content>
+                {{music.nameOfGroup}} {{music.year}}
+            </ion-card-content>
+          </ion-card>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>

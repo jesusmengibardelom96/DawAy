@@ -1,20 +1,18 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Blank
-    </ion-title>
-  </ion-toolbar>
-</ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
-
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
-  </div>
-</ion-content>
+<ion-slides pager="true" [options]="slideOpts">
+  <ion-slide>
+    <a (click)="goToMain()" class="skip">Skip</a>
+    <img src="../../assets/nota.png" class="img">
+    <h2>Hey! Welcome into DAWAFY...</h2>
+  </ion-slide>
+  <ion-slide>
+    <a (click)="goToMain()" class="skip">Skip</a>
+    <img src="../../assets/clave.png" class="img">
+    <h2>We have excellent choices for you...</h2>
+  </ion-slide>
+  <ion-slide>
+    <a (click)="goToMain()" class="skip">Skip</a>
+    <img src="../../assets/spoti.png" class="img">
+    <h2>Enjoy our App <a (click)="goToMain()">Next</a></h2>
+  </ion-slide>
+</ion-slides>
